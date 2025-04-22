@@ -1,8 +1,8 @@
-package FichaPratica1;
+package FichaPratica02;
 
 import java.util.Scanner;
 
-public class Ex08 {
+public class Ex13 {
 
     public static void main(String[] args) {
 
@@ -50,14 +50,24 @@ public class Ex08 {
 
         seg = seg + input.nextInt();
 
-        totalSeg = (min*60) + seg;
+        totalSeg = seg + (min * 60);
+        System.out.println(totalSeg);
 
+/*
         hor = totalSeg / 3600;
         min = (totalSeg / 60) - (hor * 60);
         seg = (totalSeg) - (min * 60) - (hor * 3600);
 
-        System.out.println("Duração do Album " + hor + "h " + min + "min "+ seg + "seg ");
+                */
+        hor = (min / 60);
+        min = (seg / 60) + min % 60;
+        seg = seg % 60;
 
+
+        /*min = (seg / 60) + min % 60 - (hor * 60);
+        seg = seg % 60 ; */
+
+        System.out.println("Duração do Album " + hor + "h " + min + "min " + seg + "seg ");
 
     }
 }

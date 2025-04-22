@@ -8,12 +8,11 @@ public class Ex04 {
 
         Scanner input = new Scanner(System.in);
 
-        int raio;
-        double area;
+        double raio, area;
 
         System.out.println("Introduzir raio");
 
-        raio = input.nextInt();
+        raio = input.nextDouble();
 
         area = 3.14159 * raio * raio;
 

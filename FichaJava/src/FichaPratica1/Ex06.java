@@ -26,7 +26,7 @@ public class Ex06 {
 
         valor1 = valor2;
 
-        valor2 =valor3;
+        valor2 = valor3;
 
         System.out.println("Permuta");
 

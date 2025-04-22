@@ -24,7 +24,7 @@ public class EX01 {
 
         //Soma
         soma= numero1 + numero2;
-        System.out.println("soma " + soma) ;
+        System.out.println("soma: " + soma) ;
     }
 }
 
