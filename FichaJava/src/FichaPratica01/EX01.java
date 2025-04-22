@@ -1,6 +1,4 @@
-package FichaPratica1;
-
-import com.sun.tools.javac.Main;
+package FichaPratica01;
 
 import java.util.Scanner;
 
