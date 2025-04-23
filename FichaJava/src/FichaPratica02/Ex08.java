@@ -21,7 +21,7 @@ public class Ex08 {
 
         mediaA = (nota1 * .25) + (nota2 * .35) + (nota3 * .4);
 
-        if (mediaA > 9.5)
+        if (mediaA >= 9.5)
             System.out.println(mediaA + " Aluno Aprovado");
         else
             System.out.println("media: " + mediaA + " " + "Aluno Reprovado");

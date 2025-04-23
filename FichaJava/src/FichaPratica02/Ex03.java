@@ -14,15 +14,19 @@ public class Ex03 {
         System.out.println("Introduza o Salario: ");
         sal = input.nextInt();
 
-        if (sal < 15000)
+        if (sal < 15.000) {
             taxa = sal * .2;
-        else if (sal < 20000)
+            System.out.println("Montante de imposto a pagar 20%: " + taxa);
+        }else if (sal < 20.000) {
             taxa = sal * .3;
-        else if (sal < 25000)
+            System.out.println("Montante de imposto a pagar 30%: " + taxa);
+        }else if (sal < 25.000) {
             taxa = sal * .35;
-        else
+            System.out.println("Montante de imposto a pagar 35%: " + taxa);
+        }else{
             taxa = sal * .40;
-
+            System.out.println("Montante de imposto a pagar 40%: " + taxa);
+        }
 
         System.out.println("Montante de imposto a pagar: " + taxa);
 
