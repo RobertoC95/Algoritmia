@@ -8,29 +8,34 @@ public class Ex15_2 {
 
         Scanner input = new Scanner(System.in);
 
-        int num, fac, total, num2, num3;
+        int num, fac, total, soma, num2, num3;
 
         System.out.println("insira um numero");
-        num = input.nextInt();
-        total = 0;
-        fac = 1;
-        num2 = num;
+        fac = input.nextInt();
+        num = 1;
+        num2 = 1;
+        soma = 0;
         num3 = 1;
+        total = 0;
 
-        while (fac < num) {
-            if (num3 < num) {
-                total = total + num2;
-                num3 = num3 + 1;
-                System.out.println("total " + total);
+        while (num2 < fac) {
+            soma += fac;
+            num2++;
+        }
+        fac = fac - 2;
+        total = total + soma;
+        while (fac > 1) {
+            if (num3 < fac) {
+                num3++;
+                total = total + soma;
 
             } else {
-                num2 = num2 - 1;
-                fac = ++fac;
-                System.out.println("fac " + fac);
-                num3 = num2;
+                fac--;
+                num3 = 1;
+                soma = total;
             }
         }
-        System.out.println("factorial: " + total);
+        System.out.println("total " + total);
     }
 }
 
