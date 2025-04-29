@@ -37,7 +37,6 @@ public class Ex13 {
                 System.out.println(num2);
                 num2 = num2 + 5;
             }
-            System.out.println(num1);
         }
     }
 }

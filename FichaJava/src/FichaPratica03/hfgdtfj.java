@@ -32,7 +32,7 @@ public class hfgdtfj {
             System.out.println("num3 " + num3);
             System.out.println("total " + total);
         }
-    
+
         System.out.println("total " + total);
     }
 }
