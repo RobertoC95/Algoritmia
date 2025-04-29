@@ -37,7 +37,11 @@ public class Ex16 {
         System.out.println("notas de 5: " + nt5);
         mt = mt % 5;
 
-        System.out.println("troco: " + mt + "€");
+        if (mt <= 0) {
+            System.out.println("Não há troco");
+        } else {
+            System.out.println("Troco: " + mt + "€");
+        }
 
 
 

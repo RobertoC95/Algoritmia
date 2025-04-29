@@ -16,7 +16,8 @@ public class Ex05 {
         System.out.println("Introduza um numero");
         num2 = input.nextInt();
 
-        input.nextLine();
+        input.nextLine(); //limpa input para introduzir mensagem
+        System.out.println("Introduza uma mensagem");
 
         msg = input.nextLine();
 

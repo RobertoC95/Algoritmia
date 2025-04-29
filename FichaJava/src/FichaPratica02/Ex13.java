@@ -19,24 +19,17 @@ public class Ex13 {
 
         if (hor > 24 || min > 60) {
             System.out.println("Valores introduzidos inválidos");
-        } else {
-            if (hor <= 12 && min < 10) {
-                System.out.println(hor + ":0" + min + " AM");
-            } else {
-                if (hor > 12 && min < 10) {
-                    hor = hor - 12;
-                    System.out.println(hor + ":0" + min + " PM");
-                }
-                if (hor <= 12 && min > 10) {
-                    System.out.println(hor + ":" + min + " AM");
-                } else {
-                    if (hor > 12 && min > 10) {
-                        hor = hor - 12;
-                        System.out.println(hor + ":0" + min + " PM");
-                    }
-
-                }
-            }
+        } else if (hor <= 12 && min < 10) {
+            System.out.println(hor + ":0" + min + " AM");
+        } else if (hor > 12 && min < 10) {
+            hor = hor - 12;
+            System.out.println(hor + ":0" + min + " PM");
+        } else if (hor <= 12 && min > 10) {
+            System.out.println(hor + ":" + min + " AM");
+        } else if (hor > 12 && min > 10) {
+            hor = hor - 12;
+            System.out.println(hor + ":" + min + " PM");
         }
+
     }
 }

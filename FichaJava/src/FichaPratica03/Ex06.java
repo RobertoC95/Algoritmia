@@ -16,15 +16,15 @@ public class Ex06 {
         System.out.println("Introduza o limite superior do intervalo");
         numF = input.nextInt();
 
-        if (numI > numF) {
+        if (numI < numF) {
             while (numI <= numF) {
                 System.out.println(numI);
                 numI = numI + 1;
             }
-        } else if (numF > numI) {
+        } else if (numF < numI) {
             while (numF <= numI) {
-                System.out.println(numI);
-                numI = numI + 1;
+                System.out.println(numF);
+                numF = numF + 1;
             }
         } else
             System.out.println(numI);
