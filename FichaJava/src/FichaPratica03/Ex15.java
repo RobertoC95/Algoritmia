@@ -16,9 +16,7 @@ public class Ex15 {
 
         while (num > 1) {
             fac = fac * (num - 1);
-            System.out.println(fac);
             num = num - 1;
-            System.out.println(num);
         }
         System.out.println("factorial: " + fac);
     }
