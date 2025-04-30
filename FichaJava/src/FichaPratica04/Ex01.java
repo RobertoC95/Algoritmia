@@ -10,6 +10,7 @@ public class Ex01 {
 
         int v1, v2, x = 0;
         String op, cont;
+        boolean s = true;
 
         do {
             System.out.println("Introduza um numero");
@@ -19,6 +20,11 @@ public class Ex01 {
             v2 = input.nextInt();
 
             System.out.println("Escolha a operação");
+            System.out.println("+ soma");
+            System.out.println("- subtração");
+            System.out.println("* multiplicação");
+            System.out.println("/ divisão");
+
             op = input.next();
             switch (op) {
                 case "+":
@@ -43,10 +49,10 @@ public class Ex01 {
                     System.out.println("Opção selecionada: Sim");
                     break;
                 case "n":
-                    x++;
                     System.out.println("Opção selecionada: Não");
+                    s = false;
                     break;
             }
-        } while (x != 1);
+        } while (s);
     }
 }
