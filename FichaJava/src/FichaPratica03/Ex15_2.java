@@ -8,11 +8,10 @@ public class Ex15_2 {
 
         Scanner input = new Scanner(System.in);
 
-        int num, fac, total, soma, num2, num3;
+        int fac, total, soma, num2, num3;
 
         System.out.println("insira um numero");
         fac = input.nextInt();
-        num = 1;
         num2 = 1;
         soma = 0;
         num3 = 1;
