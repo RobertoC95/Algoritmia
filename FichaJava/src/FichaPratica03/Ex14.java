@@ -17,7 +17,7 @@ public class Ex14 {
         num2 = 0;
 
         while (quant < quant2) {
-            quant = quant + 1;
+            quant++;
             if (num1 > num2) {
                 num2 = num1;
                 System.out.println("Introduza um numero");

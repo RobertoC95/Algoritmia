@@ -16,9 +16,17 @@ public class Ex09 {
         valI = 1;
         soma = num1;
 
+        while (num1 < 0) {
+            System.out.println("Não comece com um valor negativo");
+            System.out.println("Introduza um numero");
+            num1 = input.nextInt();
+            soma = num1;
+        }
+
         while (num1 != -1) {
             soma = soma + num1;
-            valI = valI + 1;
+            valI++;
+
             System.out.println("Introduza um numero");
             num1 = input.nextInt();
         }
