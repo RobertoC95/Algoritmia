@@ -30,6 +30,5 @@ public class Ex13 {
             hor = hor - 12;
             System.out.println(hor + ":" + min + " PM");
         }
-
     }
 }
