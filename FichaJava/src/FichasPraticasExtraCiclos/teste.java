@@ -7,17 +7,12 @@ public class teste {
 
         Scanner input = new Scanner(System.in);
 
-        int ano;
+        int a=10, b=1;
 
-        System.out.print("Digite um ano: ");
-        ano = input.nextInt();
+        b-=a+1;
+        System.out.println(b);
 
-        if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
-            System.out.println(ano + " é um ano bissexto.");
-        } else {
-            System.out.println(ano + " não é um ano bissexto.");
-        }
+
     }
 }
-
 
