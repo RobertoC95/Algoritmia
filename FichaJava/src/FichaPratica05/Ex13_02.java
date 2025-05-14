@@ -2,11 +2,16 @@ package FichaPratica05;
 
 import java.util.Scanner;
 
-public class Ex08 {
+public class Ex13_02 {
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        int[][] matriz = new int[3][3];
+
+        //tentar com a outra diagonal
+
+        int[][] matriz = new int[4][4];
+        int somaD = 0, t = matriz.length - 1;
 
         for (int i = 0; i < matriz.length; i++) {
 
@@ -16,12 +21,8 @@ public class Ex08 {
             }
         }
         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
-                System.out.print( matriz[i][j] + "\t");
-            }
-            System.out.println();
+            somaD += matriz[i][t--];
         }
+        System.out.println("Soma dos elementos da diagonal principal da matriz é: " + somaD);
     }
 }
-
-

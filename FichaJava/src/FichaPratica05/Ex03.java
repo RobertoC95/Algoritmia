@@ -9,7 +9,7 @@ public class Ex03 {
         Scanner input = new Scanner(System.in);
 
         int[] vetor = new int[10];
-        int maior = 0;
+        int maior = 0, menor=0;
 
         for (int i = 0; i < vetor.length; i++) {
             System.out.println("Insira no vetor[" + i + "]: ");
