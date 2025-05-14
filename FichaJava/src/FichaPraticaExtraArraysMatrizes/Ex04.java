@@ -25,7 +25,8 @@ public class Ex04 {
 
         for (int i = 0; i < vetor.length; i++) {
             if (numP == vetor[i]) {
-                System.out.println("vetor ["+i+"]");
+                System.out.println(numP +" existe nos vetor nas posições");
+                break;
             }
         }
         for (int i = 0; i < vetor.length; i++) {
