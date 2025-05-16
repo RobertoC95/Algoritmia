@@ -8,7 +8,7 @@ public class Ex05 {
         Scanner input = new Scanner(System.in);
 
         int t;
-        System.out.println("defina p tamanho do vetor :");
+        System.out.println("defina o tamanho do vetor :");
         t = input.nextInt();
 
         int[] vetor = new int[t];
@@ -18,10 +18,17 @@ public class Ex05 {
             vetor[i] = input.nextInt();
         }
 
-        for (int i = 1; i < vetor.length; i++) {
-            if (vetor[i] == vetor[i - 1]) {
-                System.out.println("valor do dublicado " + vetor[i]);
+        for (int i = 0; i < vetor.length; i++) {
+            boolean repetido = false;
+            for (int j = 0 ; j < i; j++) {
+                if (vetor[j] == vetor[i]) {
+                    repetido=true;
+                }
             }
-        }//nao esta completo
+            if(!repetido){
+                System.out.println(vetor[i]);
+            }
+        }
     }
 }
+
