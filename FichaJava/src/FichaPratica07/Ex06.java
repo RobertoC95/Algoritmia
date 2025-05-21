@@ -17,20 +17,20 @@ public class Ex06 {
 
         File ficheiro = new File(seccao);
         Scanner in = new Scanner(ficheiro);
-        int maior = 0, number;
+        int maior = 0;
         String nome="";
 
         while (in.hasNextLine()) {
             String linha = in.nextLine();
             String[] itensDaLista = linha.split(",");
 
-            number = Integer.parseInt(itensDaLista[1]);
-            if (number > maior) {
-                maior = number;
+
+            if (Integer.parseInt(itensDaLista[1]) > maior) {
+                maior = Integer.parseInt(itensDaLista[1]);
                 nome = itensDaLista[0];
             }
         }
-        System.out.println("O maior elemento do ficheiro é: " + maior + " e o seu nome é: " + nome);
+        System.out.println("A pessoa mais velha é: " + nome + " e a sua idade é: " + maior);
     }
 
     public static void main(String[] args) throws FileNotFoundException {

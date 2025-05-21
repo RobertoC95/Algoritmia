@@ -6,29 +6,26 @@ import java.util.Scanner;
 
 public class Ex08 {
 
-    public static int totalDeVendas(String seccao) throws FileNotFoundException {
+    public static void totalDeVendas(String seccao) throws FileNotFoundException {
 
         File ficheiro = new File(seccao);
         Scanner sc = new Scanner(ficheiro);
-        int total = 0;
+        double total = 0;
+        String linha = sc.nextLine();
 
         while (sc.hasNextLine()) {
-            String linha = sc.nextLine();
+            linha = sc.nextLine();
             String[] itensDaLista = linha.split(",");
 
+            total += (Double.parseDouble(itensDaLista[2]) * Double.parseDouble(itensDaLista[3]));
 
-            if (seccao.equals(itensDaLista[2])) {
-                total += (Integer.parseInt(itensDaLista[2]) * Integer.parseInt(itensDaLista[3]));
-                System.out.println(total);
-            }
         }
-        return total;
+        System.out.println("O total de vendas é: " + total);
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        int total;
+        double total;
 
-        total = totalDeVendas("Ficheiros/exercicio_08.csv");
-        System.out.println(total);
+        totalDeVendas("Ficheiros/exercicio_08.csv");
     }
 }
