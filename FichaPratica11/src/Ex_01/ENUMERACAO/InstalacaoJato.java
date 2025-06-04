@@ -1,0 +1,5 @@
+package Ex_01.ENUMERACAO;
+
+public enum InstalacaoJato {
+    WC, CINEMA, SUITE, CHUVEIRO, TOMADAS, COZINHAS, ESCRITORIO, WIFI
+}

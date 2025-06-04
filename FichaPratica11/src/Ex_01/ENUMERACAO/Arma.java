@@ -1,0 +1,5 @@
+package Ex_01.ENUMERACAO;
+
+public enum Arma {
+    METRELHADORAS, MISSEIS, FOGUETES, TORPEDOS, BOMBAS
+}
