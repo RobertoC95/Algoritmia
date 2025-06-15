@@ -13,11 +13,12 @@ public class Animal {
     private ReinoAnimal reino;
 
 
-    public Animal(String nome, String especie, String origem, double peso, String alimentacao, ReinoAnimal reino) {
+    public Animal(String nome, String especie, String origem, double peso, String[] alimentacao, ReinoAnimal reino) {
         this.nome = nome;
         this.especie = especie;
         this.origem = origem;
-        this.alimentacao = new String[]{alimentacao};
+        this.peso = peso;
+        this.alimentacao = alimentacao;
         this.reino = reino;
     }
 
@@ -49,20 +50,19 @@ public class Animal {
         }
         if (comeu) {
             fazerBarulho();
-            peso = peso + (.001 *pesoAlimento);
-            System.out.println("O " + especie + " " + nome + " comeu o " + alimento);
+            this.peso +=(pesoAlimento*.001);
+            System.out.println("O " + this.especie + " " + this.nome + " comeu o " + alimento);
         }else{
-            System.out.println("O " + especie + " " + nome + " não comeu o " + alimento);
+            System.out.println("O " + this.especie + " " + this.nome + " não comeu o " + alimento);
         }
     }
 
     public void exibirDetalhes() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Especie: " + especie);
-        System.out.println("Origem: " + origem);
-        System.out.println("Peso: " + peso);
-        System.out.println("Alimentação: " + alimentacao);
-        System.out.println("Reino: " + reino);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Especie: " + this.especie);
+        System.out.println("Origem: " + this.origem);
+        System.out.println("Peso: " + this.peso);
+        System.out.println("Reino: " + this.reino);
 
         System.out.println();
     }
