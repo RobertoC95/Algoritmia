@@ -2,7 +2,7 @@ package GrandesNegocios.Models;
 
 public class Sale {
     private String tipoProduto;
-   private String produto ;
+    private String produto ;
     private Double quantidadeVendida ;
     private Double precoUnitario;
 
