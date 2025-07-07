@@ -10,6 +10,12 @@ import java.util.Scanner;
 public class FileReader {
 
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de Clientes
+     * @return um array de clientes
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<Cliente> clientFileReader(String filePath) throws FileNotFoundException {
 
         File clientFile = new File(filePath);
@@ -38,6 +44,12 @@ public class FileReader {
         return clienteArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de Users
+     * @return um array de users
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<User> usersFileReader(String filePath) throws FileNotFoundException {
 
         File usersFile = new File(filePath);
@@ -65,6 +77,12 @@ public class FileReader {
         return usersArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de quartos
+     * @return um array de quartos
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<Quarto> quartoFileReader(String filePath) throws FileNotFoundException {
         File usersFile = new File(filePath);
         Scanner quartoScanner = new Scanner(usersFile);
@@ -90,6 +108,12 @@ public class FileReader {
         return quartoArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de experiências
+     * @return um array de experiências
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<Experiencia> experienciaFileReader(String filePath) throws FileNotFoundException {
         File experienciaFile = new File(filePath);
         Scanner experienciaScanner = new Scanner(experienciaFile);
@@ -118,6 +142,12 @@ public class FileReader {
         return experienciaArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de Guias
+     * @return um array de guias
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<GuiaExperiencia> guiaFileReader(String filePath) throws FileNotFoundException {
         File guiaExperienciaFile = new File(filePath);
         Scanner guiaExperienciaScanner = new Scanner(guiaExperienciaFile);
@@ -146,6 +176,12 @@ public class FileReader {
         return guiaExperienciaArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de Ratings de experiências
+     * @return um array de ratings de experiências
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<RatingExperiencia> ratingExpFileReader(String filePath) throws FileNotFoundException {
         File ratingExpFileReader = new File(filePath);
         Scanner ratingExperienciaScanner = new Scanner(ratingExpFileReader);
@@ -162,8 +198,8 @@ public class FileReader {
 
             String idRating = linhaSeparada[0];
             String idExp = linhaSeparada[1];
-            int ratingExp = Integer.getInteger(linhaSeparada[2]);
-            int ratingGuia = Integer.getInteger(linhaSeparada[3]);
+            int ratingExp = Integer.parseInt(linhaSeparada[2]);
+            int ratingGuia = Integer.parseInt(linhaSeparada[3]);
 
 
             RatingExperiencia newRatingExperiencia = new RatingExperiencia(idRating, idExp, ratingExp, ratingGuia);
@@ -173,6 +209,12 @@ public class FileReader {
         return ratingExperienciaArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de reservas de quartos
+     * @return um array de reservas de quartos
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<Reserva> reservasFileReader(String filePath) throws FileNotFoundException {
         File reservasFileReader = new File(filePath);
         Scanner reservasScanner = new Scanner(reservasFileReader);
@@ -190,9 +232,9 @@ public class FileReader {
             String idReserva = linhaSeparada[0];
             String numQuarto = linhaSeparada[1];
             String idCliente = linhaSeparada[2];
-            int ano = Integer.getInteger(linhaSeparada[3]);
-            int mes = Integer.getInteger(linhaSeparada[4]);
-            int semana = Integer.getInteger(linhaSeparada[5]);
+            int ano = Integer.parseInt(linhaSeparada[3]);
+            int mes = Integer.parseInt(linhaSeparada[4]);
+            int semana = Integer.parseInt(linhaSeparada[5]);
 
 
             Reserva newReserva = new Reserva(idReserva, numQuarto, idCliente, ano, mes, semana);
@@ -202,6 +244,12 @@ public class FileReader {
         return reservaArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de Tipologia dos quartos
+     * @return um array de tipologia dos quartos
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<Tipologia> tipologiaFileReader(String filePath) throws FileNotFoundException {
         File tipologiaFileReader = new File(filePath);
         Scanner tipologiaScanner = new Scanner(tipologiaFileReader);
@@ -218,7 +266,7 @@ public class FileReader {
 
             String idTipologia = linhaSeparada[0];
             String descricao = linhaSeparada[1];
-            int precoSemana = Integer.getInteger(linhaSeparada[2]);
+            int precoSemana = Integer.parseInt(linhaSeparada[2]);
 
 
             Tipologia newTipologia = new Tipologia(idTipologia, descricao, precoSemana);
@@ -228,6 +276,12 @@ public class FileReader {
         return tipologiaArray;
     }
 
+    /**
+     * Metodo de leitura de ficheiros
+     * @param filePath ficheiro de vendas de experiências
+     * @return um array de vendas de experiências
+     * @throws FileNotFoundException caso não exista ficheiro
+     */
     public ArrayList<Venda> vendaFileReader(String filePath) throws FileNotFoundException {
         File vendaFileReader = new File(filePath);
         Scanner vendaScanner = new Scanner(vendaFileReader);

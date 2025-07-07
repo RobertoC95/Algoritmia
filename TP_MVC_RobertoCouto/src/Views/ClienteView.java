@@ -20,9 +20,9 @@ public class ClienteView {
         do {
 
             System.out.println("\n\n********** MENU CLIENTE **********");
-            System.out.println("1. Consultar Quartos Disponíveis");
+            System.out.println("1. Consultar Quartos Disponíveis (metodo desenvolvido)");
             System.out.println("2. Consultar Experiências Disponíveis");
-            System.out.println("3. Consultar Experiência Favorita");
+            System.out.println("3. Consultar Experiência Favorita (metodo desenvolvido)");
             System.out.println("4. Consultar Experiência Top-Seller");
             System.out.println("5. Avaliar uma Experiência");
             System.out.println("0. Voltar");
@@ -32,11 +32,21 @@ public class ClienteView {
 
             switch (opcaoCliente) {
                 case 1: // Consultar Quartos Disponíveis
-                    System.out.println(this.clienteController.quartosDisponiveis());
+                    System.out.println("Insira mes da visita:");
+                    int mes = input.nextInt();
+                    System.out.println("Insira semana da visita:");
+                    int semana = input.nextInt();
+                    System.out.println("Quartos Disponíveis esta semana: ");
+                    System.out.println(this.clienteController.quartosDisponiveis(mes, semana));
                     break;
 
                 case 2: // Consultar Experiências Disponíveis
-                    System.out.println(this.clienteController.experienciasDisponiveis());
+                    System.out.println("Insira mes da visita:");
+                    int mes2 = input.nextInt();
+                    System.out.println("Insira ano da visita:");
+                    int ano = input.nextInt();
+                    System.out.println("Quartos Disponíveis esta semana: ");
+                    System.out.println(this.clienteController.experienciasDisponiveis(mes2, ano));
                     break;
 
                 case 3:

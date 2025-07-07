@@ -22,7 +22,7 @@ public class AdminView {
             System.out.println("1.  Consultar Total de Reservas");
             System.out.println("2.  Consultar Total de Receitas");
             System.out.println("3.  Consultar Reservas/Receitas Mensais");
-            System.out.println("4.  Consultar Tipologia de Quarto Mais Reservada");
+            System.out.println("4.  Consultar Tipologia de Quarto Mais Reservada (metodo desenvolvido)");
             System.out.println("5.  Consultar Experiência Mais Procurada (Adultos)");
             System.out.println("6.  Consultar Experiência Mais Procurada (Crianças)");
             System.out.println("7.  Consultar Experiência Mais Lucrativa");
@@ -43,10 +43,12 @@ public class AdminView {
                     break;
 
                 case 3: // Consultar Reservas/Receitas Mensais
-                    System.out.println(this.adminController.resRecMensais());
+                    int ano = input.nextInt();
+                    int mes= input.nextInt();
+                    System.out.println(this.adminController.resRecMensais(ano, mes));
                     break;
 
-                case 4:
+                case 4: // Consultar tipologia do quarto mais reservado
                     System.out.println(this.adminController.quartoMaisReservado());
                     break;
 
@@ -71,7 +73,9 @@ public class AdminView {
                     break;
 
                 case 10: // Adicionar Novo Login
-                    this.adminController.adicionarLogin();
+                    String usernameNovo=input.nextLine();
+                    String passNova = input.nextLine();
+                    this.adminController.adicionarLogin(usernameNovo, passNova);
                     break;
 
                 case 0: // Voltar

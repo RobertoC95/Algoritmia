@@ -18,7 +18,7 @@ public class LoginView {
         int opcaoLogin;
 
         do {
-            System.out.println("\n\n********** Bem-vindo/a ao Programa do Minimercado Grandes Negócios **********\n");
+            System.out.println("\n\n********** Bem-vindo/a ao Programa do Hotel Temático da Programação **********\n");
             System.out.println("1. Cliente");
             System.out.println("2. Staff");
             System.out.println("\n0. Terminar Programa");
