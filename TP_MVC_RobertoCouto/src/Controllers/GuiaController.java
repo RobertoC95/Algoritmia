@@ -53,7 +53,7 @@ public class GuiaController {
                 }
             }
             if (experienciaAtual.getIdGuiaExp().equals(username)) {
-                data += experienciaAtual.getNome() + " | " + experienciaAtual.getIdE() + " | Bilhetes Adulto: " + nAdultos + " | Bilhetes Criança: " + nCriancas + " | Total de Vendas: " + totalVendas + "€  *|*|* ";
+                data += experienciaAtual.getNome() + " | " + experienciaAtual.getIdE() + " | Bilhetes Adulto: " + nAdultos + " | Bilhetes Criança: " + nCriancas + " | Total de Vendas: " + totalVendas + "€  *|*|* \n";
             }
         }
         return data;

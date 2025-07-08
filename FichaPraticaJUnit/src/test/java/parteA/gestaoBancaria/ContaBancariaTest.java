@@ -107,7 +107,11 @@ class ContaBancariaTest {
     @Test
     void testTransferirValorInvalido() {
 
-        assertThrows(IllegalArgumentException.class, )
+        assertThrows(IllegalArgumentException.class, () -> conta1.transferir(conta2, -1500));
+
+        //controlo
+
+        assertThrows(IllegalArgumentException.class, ()-> conta2.transferir(conta1, -3562));
     }
 
     @Test
